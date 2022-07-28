@@ -2,3 +2,12 @@ body{
     background: brown;
     color:white;
 }
+label{
+    display: inline-block;
+}
+label img{
+    pointer-events: none;
+}
+label img{
+    max-width: 200px;
+}
