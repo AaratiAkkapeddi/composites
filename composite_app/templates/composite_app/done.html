@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'composite_app/main.css' %}">
+        <title>poppett</title>
+    </head>
+    <body>
+        {% if tmp %}
+            <img src='{{tmp}}'/>
+        {% endif %}
+        {% for i in donePaths %}
+         <p>poop</p>
+         <img src="{{i}}"/>
+        {% endfor %}
+        <h1>hello poppppet</h1>
+        {% if filePathName %}
+        <img src='{{filePathName}}'/>
+        {% endif %}
+    </body>
+</html>

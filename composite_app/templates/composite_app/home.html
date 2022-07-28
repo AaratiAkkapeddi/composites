@@ -6,23 +6,20 @@
         <title>poppett</title>
     </head>
     <body>
-        
-        {% for i in donePaths %}
-            <img src="{{i}}"/>
-        {% endfor %}
-        <h1>hello poppppet</h1>
+        <h1>Select the images that you want to blend:</h1>
         {% if filePathName %}
         <img src='{{filePathName}}'/>
         {% endif %}
         <form method="post" enctype="multipart/form-data" action="predictImage">
             <fieldset>
             {% for i in listOfImagePaths %}
-             <label for="{{ forloop.counter0}}-image" > 
-                <img src="{{i}}"/>
-                </label><input type="checkbox" name="images[]" id="{{forloop.counter0 }}-image" value="{{i}}"/>
+                <input type="checkbox" name="images[]" id="{{forloop.counter0 }}-image" value="{{i}}"/>
+                <label for="{{ forloop.counter0}}-image" > 
+                    <img src="{{i}}"/>
+                    </label>
             {% endfor %}
             </fieldset>
-            <label for="fname">upload image</label><input name="filePath" type="file"/>
+            <!-- <label for="fname">upload image</label><input name="filePath" type="file"/> -->
             <input type="submit" value="Submit">
         </form>
     </body>
