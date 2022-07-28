@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'composite_app/main.css' %}">
+        <title>poppett</title>
+    </head>
+    <body>
+        <h1>hello poppppet</h1>
+        {% if filePathName %}
+        <img src='{{filePathName}}'/>
+        {% endif %}
+        <form method="post" enctype="multipart/form-data" action="predictImage">
+            <label for="fname">upload image</label><input name="filePath" type="file"/>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
